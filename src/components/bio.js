@@ -38,8 +38,8 @@ function Bio() {
               }}
             />
             <p>
-              Written by <strong>{author}</strong> who lives and works in San
-              Francisco building useful things.
+              <strong>Owen Halliday</strong> is a young developer with a passion for
+              mobile development. He is currently learning Flutter.
               {` `}
               <a href={`https://twitter.com/${social.twitter}`}>
                 You should follow him on Twitter

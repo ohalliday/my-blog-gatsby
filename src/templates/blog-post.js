@@ -5,6 +5,7 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
+import {Button} from "reactstrap"
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -14,7 +15,7 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO
+        <SEO    
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
@@ -36,7 +37,7 @@ class BlogPostTemplate extends React.Component {
           }}
         />
         <Bio />
-
+          
         <ul
           style={{
             display: `flex`,
@@ -48,16 +49,20 @@ class BlogPostTemplate extends React.Component {
         >
           <li>
             {previous && (
-              <Link to={previous.fields.slug} rel="prev">
+              <Button color="primary">
+              <Link class= "buttonText" to={previous.fields.slug} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
+              </Button>
             )}
           </li>
           <li>
             {next && (
-              <Link to={next.fields.slug} rel="next">
+              <Button color="primary">
+              <Link class= "buttonText" to={next.fields.slug} rel="next">
                 {next.frontmatter.title} →
               </Link>
+              </Button>
             )}
           </li>
         </ul>
